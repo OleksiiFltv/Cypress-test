@@ -5,12 +5,13 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   viewportHeight: 1080,
   chromeWebSecurity: false,
-  responseTimeout: 40000
+  responseTimeout: 40000,
+  screenshotsFolder: "screenshot",
   e2e: {
-    retries{
+    retries: {
       runMode: 1,
       openMode: 1
-    }
+    },
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
