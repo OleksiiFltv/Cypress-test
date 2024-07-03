@@ -12,7 +12,7 @@ module.exports = defineConfig({
       runMode: 1,
       openMode: 1,
     },
-    baseUrl: "https://guest:welcome2qauto@qauto2.forstudy.space",
+    
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
