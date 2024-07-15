@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "cypress": "^13.12.0"
+  },
+  "scripts": {
+    "test:qauto": "cypress run --config-file cypress.config.js",
+    "test:qauto2": "cypress run --config-file config2.js",
+    "mocha-report": "npx mochawesome-merge 'cypress/reports/*.js' > mochawesome.js && npx marge mochawesome.js"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
