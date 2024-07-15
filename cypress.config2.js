@@ -7,12 +7,12 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   responseTimeout: 40000,
   screenshotsFolder: "screenshot",
+  baseUrl: "https://qauto2.forstudy.space/",
   user: {
-    email: "a.filatov1@yopmail.com",
+    email: "a.filatov2@yopmail.com",
     password: "Aaa!1234",
   },
   e2e: {
-    baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space/",
     retries: {
       runMode: 1,
       openMode: 1,
@@ -21,6 +21,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    specPattern: "cypress/e2e/**/*.spec.js",
+    specPattern: "cypress/e2e/**/*.js",
   },
 });
