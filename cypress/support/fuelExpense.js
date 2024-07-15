@@ -1,15 +1,13 @@
 class Expense {
   visit() {
-    let visitFuelExpense =
-      "body > app-root > app-global-layout > div > div > div > app-panel-layout > div > div > div > div.col-3.d-none.d-lg-block.sidebar-wrapper > nav > a:nth-child(2)";
+    let visitFuelExpense = ".sidebar-wrapper nav a:nth-child(2)";
     cy.get(visitFuelExpense).click();
   }
 
   fillExpense(mileage, liters, cost) {
-    let addExpenseBtn =
-      "body > app-root > app-global-layout > div > div > div > app-panel-layout > div > div > div > div.col-lg-9.main-wrapper > div > app-fuel-expenses > div > div.panel-page_heading.d-flex.flex-column.flex-lg-row > div > button";
+    let addExpenseBtn = "app-fuel-expenses .panel-page_heading > div > button";
     let addInfo =
-      "body > ngb-modal-window > div > div > app-add-expense-modal > div.modal-footer.d-flex.justify-content-end > button.btn.btn-primary";
+      "app-add-expense-modal .modal-footer > button.btn.btn-primary";
     cy.get(addExpenseBtn).click();
     cy.get("#addExpenseMileage").clear().type(mileage);
     cy.get("#addExpenseLiters").type(liters);
