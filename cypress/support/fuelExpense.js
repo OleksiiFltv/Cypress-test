@@ -10,11 +10,10 @@ class Expense {
       "body > app-root > app-global-layout > div > div > div > app-panel-layout > div > div > div > div.col-lg-9.main-wrapper > div > app-fuel-expenses > div > div.panel-page_heading.d-flex.flex-column.flex-lg-row > div > button";
     let addInfo =
       "body > ngb-modal-window > div > div > app-add-expense-modal > div.modal-footer.d-flex.justify-content-end > button.btn.btn-primary";
-    let addTotalCost = "#addExpenseTotalCost";
     cy.get(addExpenseBtn).click();
     cy.get("#addExpenseMileage").clear().type(mileage);
     cy.get("#addExpenseLiters").type(liters);
-    cy.get(addTotalCost).type(cost);
+    cy.get("#addExpenseTotalCost").type(cost);
     cy.get(addInfo).click();
   }
 }
