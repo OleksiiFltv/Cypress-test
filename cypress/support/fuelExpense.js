@@ -5,7 +5,7 @@ class Expense {
     cy.get(visitFuelExpense).click();
   }
 
-  fuelExpense(mileage, liters, cost) {
+  fillExpense(mileage, liters, cost) {
     let addExpenseBtn =
       "body > app-root > app-global-layout > div > div > div > app-panel-layout > div > div > div > div.col-lg-9.main-wrapper > div > app-fuel-expenses > div > div.panel-page_heading.d-flex.flex-column.flex-lg-row > div > button";
     let addInfo =
