@@ -33,13 +33,14 @@ describe("api testing", () => {
   });
 
   it("update post by id", () => {
+    const id = 1;
     const updatePost = {
       title: "I want to include my own title",
       body: "rock your body, move your body",
       userId: 55,
     };
     cy.request({
-      url: `${urlBase}/posts/1`,
+      url: `${urlBase}/posts/${id}`,
       method: "PUT",
       body: updatePost,
     }).as("updatePost");
