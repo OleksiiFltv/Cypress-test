@@ -24,9 +24,9 @@ describe("add car and API testing", () => {
       .its("request.body")
       .should((body) => {
         console.log("Request body:", body);
-        expect(body).to.have.property("carBrandId", 2);
+        expect(body).to.have.property("carBrandId", carBrand.id);
         expect(body).to.have.property("carModelId", 10);
-        expect(body).to.have.property("mileage", 50);
+        expect(body).to.have.property("mileage", carMileage);
       });
   });
 });
